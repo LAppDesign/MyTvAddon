@@ -20,7 +20,7 @@ const baseConfig = {
         version: '1.0.0',
         name: 'OMG TV',
         description: 'Modalita provvisoria, installazione con errori, attivo mod. provvisoria',
-        logo: 'https://github.com/LAppDesign/MyTvAddon/edit/main/tv.png?raw=true',
+        logo: 'https://github.com/LAppDesign/MyTvAddon/main/tv.png?raw=true',
         resources: ['stream', 'catalog', 'meta'],
         types: ['tv'],
         idPrefixes: ['tv'],
