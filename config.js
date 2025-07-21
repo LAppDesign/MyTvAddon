@@ -17,10 +17,10 @@ const baseConfig = {
     },
     manifest: {
         id: 'org.mccoy88f.omgtv',
-        version: '1.0.0',
-        name: 'OMG TV',
+        version: '2.1',
+        name: 'MyAddonStudio',
         description: 'Modalita provvisoria, installazione con errori, attivo mod. provvisoria',
-        logo: 'https://github.com/LAppDesign/MyTvAddon/main/tv.png?raw=true',
+        logo: 'https://github.com/LAppDesign/MyTvAddon/blob/main/tv.png?raw=true',
         resources: ['stream', 'catalog', 'meta'],
         types: ['tv'],
         idPrefixes: ['tv'],
@@ -28,7 +28,7 @@ const baseConfig = {
             {
                 type: 'tv',
                 id: 'omg_tv',
-                name: 'OMG TV', // ESTE SERÁ SOBRESCRITO PELA LÓGICA DE customConfig.addonName
+                name: 'MyAddonStudio', // ESTE SERÁ SOBRESCRITO PELA LÓGICA DE customConfig.addonName
                 extra: [
                     {
                         name: 'genre',
