@@ -20,7 +20,7 @@ const baseConfig = {
         version: '1.0.0',
         name: 'OMG TV',
         description: 'Modalita provvisoria, installazione con errori, attivo mod. provvisoria',
-        logo: 'https://github.com/mccoy88f/OMG-TV-Stremio-Addon/blob/main/tv.png?raw=true',
+        logo: 'https://github.com/LAppDesign/MyTvAddon/edit/main/tv.png?raw=true',
         resources: ['stream', 'catalog', 'meta'],
         types: ['tv'],
         idPrefixes: ['tv'],
@@ -28,7 +28,7 @@ const baseConfig = {
             {
                 type: 'tv',
                 id: 'omg_tv',
-                name: 'OMG TV',
+                name: 'OMG TV', // ESTE SERÁ SOBRESCRITO PELA LÓGICA DE customConfig.addonName
                 extra: [
                     {
                         name: 'genre',
@@ -77,8 +77,8 @@ function loadCustomConfig() {
                     },
                     catalogs: [{
                         ...baseConfig.manifest.catalogs[0],
-                        id: addonConfigExists ? 'omg_plus_tv' : baseConfig.manifest.catalogs[0].id,
-                        name: addonConfigExists ? 'OMG+ TV' : baseConfig.manifest.catalogs[0].name,
+                        id: customConfig.catalogId || (customConfig.addonId ? customConfig.addonId + '_catalog' : baseConfig.manifest.catalogs[0].id), // Se quiser ID diferente para o catálogo
+                        name: customConfig.addonName || baseConfig.manifest.catalogs[0].name, // << AQUI ESTÁ A ALTERAÇÃO CRUCIAL
                         extra: [
                             {
                                 name: 'genre',
