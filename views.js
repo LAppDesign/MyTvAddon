@@ -260,7 +260,7 @@ body {
                <div class="config-form">
                    <h2>Gerar Configuração</h2>
                    <form id="configForm" onsubmit="updateConfig(event)">
-                       <label>M3U URL:</label>
+                       <label>URL:</label>
                        <input type="url" name="m3u" 
                               value="${m3uIsDisabled ? m3uDefaultUrl : (query.m3u || '')}" 
                               ${m3uIsDisabled ? 'readonly' : ''} 
