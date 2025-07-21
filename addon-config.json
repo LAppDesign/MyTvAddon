@@ -1,7 +1,7 @@
 {
   "addonId": "org.mccoy88f.omgtv.personalizado",
-  "addonName": "OMG TV Personalizado",
+  "addonName": "MyAddonStudio Personalizado",
   "addonDescription": "Meu addon personalizado para Stremio.",
   "addonVersion": "1.0.0",  // <-- ADICIONE OU CORRIJA ESTA LINHA!
-  "addonLogo": "https://meu.logo.com/logo.png"
+  "addonLogo": "https://i.postimg.cc/1t3ktkBL/tv.png"
 }
