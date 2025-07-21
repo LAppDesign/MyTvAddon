@@ -1,31 +1,25 @@
-# Usa un'immagine Node.js come base
-FROM node:20-slim
+FROM node:18-alpine
 
-# Imposta la directory di lavoro
-WORKDIR /app
+RUN apk add --no-cache git
 
-# Installa git, Python e pip (se necessario)
-RUN apt-get update && \
-    apt-get install -y git python3 python3-pip && \
-    pip3 install requests --break-system-packages && \
-    rm -rf /var/lib/apt/lists/*
+WORKDIR /usr/src/app
 
-# Copia i file del progetto
-COPY package.json package-lock.json ./
-RUN npm install
+# Não precisa mais do git clone aqui, pois o Railway copia o repo automaticamente
+# Removendo: RUN git clone https://github.com/LAppDesign/MyTvAddon .
 
-# Copia il resto del codice
-COPY . .
+# Apenas copia os arquivos existentes no repo (que o Railway já clonou)
+COPY . . 
 
-# Crea directory per i dati e imposta i permessi
-RUN mkdir -p /app/data && chown -R node:node /app/data
+RUN npm install --omit=dev
 
-# Crea la directory temp e imposta i permessi (come nel Dockerfile di Hugging Face)
-RUN mkdir -p /app/temp && \
-    chmod 777 /app/temp
+# --- NOSSA CORREÇÃO AQUI ---
+# Criar a pasta 'temp' e dar permissões ao utilizador 'node'
+RUN mkdir temp && chown node:node temp
+# ---------------------------
 
-# Esponi la porta 10000 (usata dal server)
-EXPOSE 10000
+EXPOSE 7860
 
-# Avvia l'add-on
-CMD ["node", "index.js"]
+# O Railway injeta a variável PORT. O seu aplicativo deve "escutar" nela.
+# Ajuste o CMD para usar a variável PORT, se seu aplicativo precisa.
+# Se o npm start já usa a variável PORT ou uma configuração do tipo, pode manter.
+CMD ["npm", "start"]
