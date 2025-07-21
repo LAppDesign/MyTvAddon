@@ -2,6 +2,6 @@
   "addonId": "org.mccoy88f.omgtv.personalizado",
   "addonName": "MyAddonStudio Personalizado",
   "addonDescription": "Meu addon personalizado para Stremio.",
-  "addonVersion": "2.1",  // <-- ADICIONE OU CORRIJA ESTA LINHA!
+  "addonVersion": "2.1",
   "addonLogo": "https://i.postimg.cc/1t3ktkBL/tv.png"
 }
