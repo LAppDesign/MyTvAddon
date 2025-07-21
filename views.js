@@ -222,7 +222,7 @@ const renderConfigPage = (protocol, host, query, manifest) => {
        </head>
        <body>
            <video autoplay loop muted id="background-video">
-               <source src="https://static.vecteezy.com/system/resources/previews/001/803/236/mp4/no-signal-bad-tv-free-video.mp4" type="video/mp4">
+               <source src="https://static.vecteezy.com/system/resources/previews/001/803/236/mp4/no-signal-bad-tv-free-vido.mp4" type="video/mp4">
                Il tuo browser non supporta il tag video.
            </video>
 
@@ -237,8 +237,8 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                </div>
 
                <div class="buttons">
-                   <button onclick="copyManifestUrl()">COPIA URL MANIFEST</button>
-                   <button onclick="installAddon()">INSTALLA SU STREMIO</button>
+                   <button onclick="copyManifestUrl()">COPIAR URL DO MANIFESTO</button>
+                   <button onclick="installAddon()">INSTALAR NO STREMIO</button>
                </div>
                
                <div class="config-form">
