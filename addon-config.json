@@ -1,7 +1,7 @@
 {
-    "addonName": "MyTvAddon",
-    "addonId": "org.mccoy88f.omgpremiumtv",
-    "addonDescription": "Addon per Stremio che ti permette di guardare i tuoi canali TV e IPTV preferiti da playlist M3U/M3U8, arricchiti con informazioni sui programmi (EPG)",
-    "addonVersion": "2.1",
-    "addonLogo": "https://i.postimg.cc/1t3ktkBL/tv.png"
+  "addonId": "org.mccoy88f.omgtv.personalizado",
+  "addonName": "OMG TV Personalizado",
+  "addonDescription": "Meu addon personalizado para Stremio.",
+  "addonVersion": "1.0.0",  // <-- ADICIONE OU CORRIJA ESTA LINHA!
+  "addonLogo": "https://meu.logo.com/logo.png"
 }
