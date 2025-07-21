@@ -17,7 +17,7 @@ const baseConfig = {
     },
     manifest: {
         id: 'org.mccoy88f.omgtv',
-        version: '2.1',
+        version: '2.1.0',
         name: 'MyAddonStudio',
         description: 'Modalita provvisoria, installazione con errori, attivo mod. provvisoria',
         logo: 'https://github.com/LAppDesign/MyTvAddon/blob/main/tv.png?raw=true',
