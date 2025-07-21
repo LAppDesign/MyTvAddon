@@ -1,29 +1,31 @@
-# Usa imagem base leve com Node 20
+# Usa un'immagine Node.js come base
 FROM node:20-slim
 
-# Define diretório de trabalho
+# Imposta la directory di lavoro
 WORKDIR /app
 
-# Instala git, python3, pip e limpa cache
+# Installa git, Python e pip (se necessario)
 RUN apt-get update && \
     apt-get install -y git python3 python3-pip && \
-    pip3 install requests && \
+    pip3 install requests --break-system-packages && \
     rm -rf /var/lib/apt/lists/*
 
-# Copia ficheiros de dependências e instala
-COPY package*.json ./
-RUN npm install --omit=dev
+# Copia i file del progetto
+COPY package.json package-lock.json ./
+RUN npm install
 
-# Copia o resto do projeto
+# Copia il resto del codice
 COPY . .
 
-# Cria diretórios necessários e ajusta permissões
-RUN mkdir -p /app/data /app/temp && \
-    chown -R node:node /app && \
-    chmod -R 755 /app/temp
+# Crea directory per i dati e imposta i permessi
+RUN mkdir -p /app/data && chown -R node:node /app/data
 
-# Expõe a porta que será usada dinamicamente
-EXPOSE 7860
+# Crea la directory temp e imposta i permessi (come nel Dockerfile di Hugging Face)
+RUN mkdir -p /app/temp && \
+    chmod 777 /app/temp
 
-# Comando para arrancar a app
+# Esponi la porta 10000 (usata dal server)
+EXPOSE 10000
+
+# Avvia l'add-on
 CMD ["node", "index.js"]
