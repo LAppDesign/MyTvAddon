@@ -116,12 +116,3 @@ function loadCustomConfig() {
 
 const config = loadCustomConfig();
 module.exports = config;
-
-Próximos passos:
-1. Copie TODO o código acima.
-2. Vá ao seu repositório GitHub e abra o ficheiro config.js.
-3. Substitua o conteúdo atual por este código.
-4. Faça um git commit e git push para o seu repositório.
-5. A DigitalOcean fará o auto-deploy do seu addon.
-6. No Stremio, desinstale o addon "MyAddonStudio" e instale-o novamente. Isso é crucial para que o Stremio carregue o novo manifesto com a propriedade configurable: false.
-Depois disso, o ícone da engrenagem deverá ter desaparecido.
