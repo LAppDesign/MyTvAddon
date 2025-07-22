@@ -47,6 +47,9 @@ const baseConfig = {
             }
         ],
         behaviorHints: {
+            // --- ALTERAÇÃO AQUI (PRIMEIRA OCORRÊNCIA) ---
+            configurable: false, // Alterado de true para false para remover o ícone de definições
+            // --- FIM DA ALTERAÇÃO ---
             configurationURL: null,  // Verrà impostato dinamicamente
             reloadRequired: true
         }
@@ -72,6 +75,10 @@ function loadCustomConfig() {
                     version: customConfig.addonVersion || baseConfig.manifest.version,
                     logo: customConfig.addonLogo || baseConfig.manifest.logo,
                     behaviorHints: {
+                        // --- ALTERAÇÃO AQUI (SEGUNDA OCORRÊNCIA) ---
+                        ...baseConfig.manifest.behaviorHints, // Mantenha isso para herdar outras hints
+                        configurable: false, // Definido explicitamente como false aqui também
+                        // --- FIM DA ALTERAÇÃO ---
                         configurationURL: null,  // Verrà impostato dinamicamente
                         reloadRequired: true
                     },
