@@ -496,8 +496,8 @@ background: rgba(255,255,255,0.1); padding: 15px; border-radius: 4px;">
                       <strong>ATENÇÃO!</strong>
                       <ul style="text-align: center;
 margin-top: 10px;">
-                          <p>Não sou responsável pelo uso indevido do addon.</p>
-                          <p>Verifica e respeita a legislação vigente no teu país!</p>
+                          <p>A utilização deste addon é da inteira responsabilidade do utilizador.</p>
+                          <p>Respeita sempre a legislação aplicável.</p>
                       </ul>
       
                   </div>
