@@ -280,9 +280,8 @@ text-decoration: none;
                          Ativar EPG
                      </label>
                  ` : `
-                     <p>A configuração da lista M3U e EPG 
-está desativada no momento.</p>
-                     <p>Entre em contato com o administrador para obter o URL de instalação.</p>
+                     <p>A configuração está desativada no momento.</p>
+                     <p>Entre em contato com o administrador.</p>
                  `}
                  ${showConfigFields ? `
                  <div class="advanced-settings">
